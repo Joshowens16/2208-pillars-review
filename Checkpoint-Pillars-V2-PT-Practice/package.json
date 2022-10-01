@@ -1,0 +1,26 @@
+{
+  "name": "pillars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive --exit",
+    "test-dev": "NODE_ENV='testing' DATABASE_URL='postgres://localhost/pillars_test' nodemon --exec mocha test/server/*.spec.js",
+    "test-windows": "set NODE_ENV=testing&& set DATABASE_URL=postgres://localhost:5432/pillars_practice_test&& npm run test -- --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.19",
+    "supertest": "^6.2.4"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.3"
+  }
+}
